@@ -1,0 +1,178 @@
+[
+  {
+    "id": "F01",
+    "skill": "systematic-debugging",
+    "kind": "explicit",
+    "prompt": "このSkillを使用してください。",
+    "invocation": {
+      "codex": "$systematic-debugging",
+      "claude": "/systematic-debugging"
+    },
+    "expect": "Skill本文の読み込みを観測し、定義された出力と完了条件を満たす。",
+    "forbid": "自己申告だけで発動を確認済みにしない。外部作用を追加しない。"
+  },
+  {
+    "id": "F02",
+    "skill": "systematic-debugging",
+    "kind": "positive",
+    "prompt": "最初の修正後も同じテストが落ちます。原因が分からないので調査して修正してください。",
+    "expect": "対象Skillの選択・本文読み込みと、タスクに必要な出力を観測する。",
+    "forbid": "無関係な資料の全件読込や未承認の外部作用。"
+  },
+  {
+    "id": "F03",
+    "skill": "systematic-debugging",
+    "kind": "positive",
+    "prompt": "特定の入力でだけAPIが500になります。再現条件と根本原因を調べてください。",
+    "expect": "対象Skillの選択・本文読み込みと、タスクに必要な出力を観測する。",
+    "forbid": "無関係な資料の全件読込や未承認の外部作用。"
+  },
+  {
+    "id": "F04",
+    "skill": "systematic-debugging",
+    "kind": "negative",
+    "prompt": "READMEの誤字だけ直してください。",
+    "expect": "このSkillを発動せず、依頼の範囲で処理する。他の適切なSkillの使用は妨げない。",
+    "forbid": "このSkillや重い開発フローをキーワードだけで選択する。"
+  },
+  {
+    "id": "F05",
+    "skill": "systematic-debugging",
+    "kind": "negative",
+    "prompt": "この関数の意味を説明してください。",
+    "expect": "このSkillを発動せず、依頼の範囲で処理する。他の適切なSkillの使用は妨げない。",
+    "forbid": "このSkillや重い開発フローをキーワードだけで選択する。"
+  },
+  {
+    "id": "F06",
+    "skill": "verify-changes",
+    "kind": "explicit",
+    "prompt": "このSkillを使用してください。",
+    "invocation": {
+      "codex": "$verify-changes",
+      "claude": "/verify-changes"
+    },
+    "expect": "Skill本文の読み込みを観測し、定義された出力と完了条件を満たす。",
+    "forbid": "自己申告だけで発動を確認済みにしない。外部作用を追加しない。"
+  },
+  {
+    "id": "F07",
+    "skill": "verify-changes",
+    "kind": "positive",
+    "prompt": "変更した設定が実際に読み込まれるか検証してください。",
+    "expect": "対象Skillの選択・本文読み込みと、タスクに必要な出力を観測する。",
+    "forbid": "無関係な資料の全件読込や未承認の外部作用。"
+  },
+  {
+    "id": "F08",
+    "skill": "verify-changes",
+    "kind": "positive",
+    "prompt": "入力検証を変更しました。影響に合ったテストとビルドを実行してください。",
+    "expect": "対象Skillの選択・本文読み込みと、タスクに必要な出力を観測する。",
+    "forbid": "無関係な資料の全件読込や未承認の外部作用。"
+  },
+  {
+    "id": "F09",
+    "skill": "verify-changes",
+    "kind": "negative",
+    "prompt": "このコードは何をするものですか？",
+    "expect": "このSkillを発動せず、依頼の範囲で処理する。他の適切なSkillの使用は妨げない。",
+    "forbid": "このSkillや重い開発フローをキーワードだけで選択する。"
+  },
+  {
+    "id": "F10",
+    "skill": "verify-changes",
+    "kind": "negative",
+    "prompt": "ドキュメントの句読点を1か所だけ直してください。",
+    "expect": "このSkillを発動せず、依頼の範囲で処理する。他の適切なSkillの使用は妨げない。",
+    "forbid": "このSkillや重い開発フローをキーワードだけで選択する。"
+  },
+  {
+    "id": "F11",
+    "skill": "self-review",
+    "kind": "explicit",
+    "prompt": "このSkillを使用してください。",
+    "invocation": {
+      "codex": "$self-review",
+      "claude": "/self-review"
+    },
+    "expect": "Skill本文の読み込みを観測し、定義された出力と完了条件を満たす。",
+    "forbid": "自己申告だけで発動を確認済みにしない。外部作用を追加しない。"
+  },
+  {
+    "id": "F12",
+    "skill": "self-review",
+    "kind": "positive",
+    "prompt": "自分の変更差分に要件漏れや不具合がないかレビューしてください。",
+    "expect": "対象Skillの選択・本文読み込みと、タスクに必要な出力を観測する。",
+    "forbid": "無関係な資料の全件読込や未承認の外部作用。"
+  },
+  {
+    "id": "F13",
+    "skill": "self-review",
+    "kind": "positive",
+    "prompt": "PR提出前に、現在のstage済み・未stage・追加ファイルに漏れがないか確認してください。",
+    "expect": "対象Skillの選択・本文読み込みと、タスクに必要な出力を観測する。",
+    "forbid": "無関係な資料の全件読込や未承認の外部作用。"
+  },
+  {
+    "id": "F14",
+    "skill": "self-review",
+    "kind": "negative",
+    "prompt": "PR #1がmerge済みか教えてください。",
+    "expect": "このSkillを発動せず、依頼の範囲で処理する。他の適切なSkillの使用は妨げない。",
+    "forbid": "このSkillや重い開発フローをキーワードだけで選択する。"
+  },
+  {
+    "id": "F15",
+    "skill": "self-review",
+    "kind": "negative",
+    "prompt": "他の人が作成したPR #1をレビューしてください。",
+    "expect": "このSkillを発動せず、依頼の範囲で処理する。他の適切なSkillの使用は妨げない。",
+    "forbid": "このSkillや重い開発フローをキーワードだけで選択する。"
+  },
+  {
+    "id": "F16",
+    "skill": "handoff",
+    "kind": "explicit",
+    "prompt": "このSkillを使用してください。",
+    "invocation": {
+      "codex": "$handoff",
+      "claude": "/handoff"
+    },
+    "expect": "Skill本文の読み込みを観測し、定義された出力と完了条件を満たす。",
+    "forbid": "自己申告だけで発動を確認済みにしない。外部作用を追加しない。"
+  },
+  {
+    "id": "F17",
+    "skill": "handoff",
+    "kind": "positive",
+    "prompt": "別のCLIへ切り替えるので現在の作業を引き継いでください。",
+    "expect": "対象Skillの選択・本文読み込みと、タスクに必要な出力を観測する。",
+    "forbid": "無関係な資料の全件読込や未承認の外部作用。"
+  },
+  {
+    "id": "F18",
+    "skill": "handoff",
+    "kind": "positive",
+    "prompt": "未完了の機能開発を中断するので次のセッション用の記録を残してください。",
+    "expect": "対象Skillの選択・本文読み込みと、タスクに必要な出力を観測する。",
+    "forbid": "無関係な資料の全件読込や未承認の外部作用。"
+  },
+  {
+    "id": "F19",
+    "skill": "handoff",
+    "kind": "negative",
+    "prompt": "helloを日本語へ訳してください。",
+    "expect": "このSkillを発動せず、依頼の範囲で処理する。他の適切なSkillの使用は妨げない。",
+    "forbid": "このSkillや重い開発フローをキーワードだけで選択する。"
+  },
+  {
+    "id": "F20",
+    "skill": "handoff",
+    "kind": "negative",
+    "prompt": "この1行のtypoを直してください。",
+    "expect": "このSkillを発動せず、依頼の範囲で処理する。他の適切なSkillの使用は妨げない。",
+    "forbid": "このSkillや重い開発フローをキーワードだけで選択する。"
+  }
+]

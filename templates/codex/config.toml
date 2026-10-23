@@ -1,0 +1,3 @@
+# User defaults. Keep authentication and machine-specific settings outside Git.
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
